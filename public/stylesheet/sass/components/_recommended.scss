@@ -1,0 +1,39 @@
+.recommended {
+    width: 100%;
+    padding: 1.5rem;
+    position: relative;
+
+    &__item {
+        position: inline;
+        border: 1px solid $color-white;
+        transition: all .2s;
+        margin: 0.5rem;
+        position: relative;
+        padding: 1.1rem;
+
+        &:hover {
+            background-color: $color-yellow;
+            color: $color-black;
+            border: 1px solid $color-yellow;
+            box-shadow: 0rem 1.5rem 2rem rgba($color-black, .15);
+            cursor: pointer;
+        }
+    }
+
+    &__item-black {
+        position: inline;
+        border: 1px solid $color-grey;
+        transition: all .2s;
+        margin: 0.5rem;
+        position: relative;
+        padding: 1.1rem;
+
+        &:hover {
+            background-color: $color-yellow;
+            color: $color-black;
+            border: 1px solid $color-yellow;
+            box-shadow: 0rem 1.5rem 2rem rgba($color-black, .15);
+            cursor: pointer;
+        }
+    }
+}

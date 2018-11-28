@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BrilliantMinds</title>
+    <link rel="stylesheet" href="/stylesheet/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+        crossorigin="anonymous"></script>
+</head>
+
+<header class="header header-home header__scrolled">
+    <div class="row">
+        <div class="col-1-of-2">
+            <div class="header__logo-box u-vertical-center">
+                <img src="/media/images/logo/logo-white.png" alt="" class="header__logo">
+            </div>
+        </div>
+
+        <div class="col-1-of-2">
+            <ul class="header__navigation u-text-right u-vertical-center">
+                    <% if(typeof user == 'object' && user) { %>
+                        <li class="header__navigation-item">
+                                <% if(user.role === '2') { %>
+                                    <a href="/instructor/profile %>" class="default-link">Welcome! <%= user.username %></a>
+                                <% } %>
+
+                                <% if(user.role === '1') { %>
+                                    <a href="/student/profile" class="default-link">Welcome! <%= user.username %></a>
+                                <% } %>
+                        </li>
+                        <li class="header__navigation-item">
+                            <a href="/logout" class="default-link">Logout</a>
+                        </li>
+                    <% } else{ %>
+                        <li class="header__navigation-item">
+                            <a href="/loginHeader" class="default-link">Login</a>
+                        </li>
+                
+                        <li class="header__navigation-item">
+                            <a href="/registerHeader" class="default-link">Sign up</a>
+                        </li>
+                    <% } %>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero__background-image u-brightness-75">
+
+        </div>
+
+        <div class="hero__textbox u-vertical-center-both u-text-center">
+            <div class="heading-primary-white">
+                <div class="heading-primary-white--main u-font-bold">Start learning what you love.</div>
+                <div class="heading-primary-white--sub">Learning knows no age.</div>
+                <div class="recommended u-margin-top-medium">
+                    <span class="recommended__item">Blockchain Programming</span>
+                    <span class="recommended__item">Machine Learning</span>
+                    <span class="recommended__item">Accounting</span>
+                    <span class="recommended__item">Economics</span>
+                    <span class="recommended__item">Stock Trading</span>
+                </div>
+            </div>
+
+            <div class="u-margin-top-big">
+                <input type="text" placeholder="What do you want to learn?" class="searchbox-default">
+                <a href="/search"><i class="fas fa-search u-icon-white"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <div class="headline u-margin-top-medium">
+        <div class="row headline__item-best u-margin-top-medium u-padding-medium u-line-height-small">
+            <div class="heading-primary-black">
+                <div class="heading-primary-black--sub-normal-underline u-font-bold">
+                    Instructor of the week
+                </div>
+            </div>
+
+            <div class="col-1-of-5 u-margin-top-medium">
+                <img src="../media/images/instructor-profile/fatih.jpg" alt="" class="image-round image-round-large u-align-right-image">
+            </div>
+
+            <div class="col-4-of-5 u-margin-top-big">
+                <span class="headline__item-title">Fatih Amzah</span>
+                <span class="headline__item-tag">Best Programming Instructor</span>
+                <span class="headline__item-location">Based in Jakarta, Indonesia</span>
+                <span class="headline__item-description">Fatih's pure excellence in teaching has earned him instructor of the week. With overall 4.9 course rating
+                    and over 7000 students teached.</span>
+                <a href="instructor/profile/3" class="button--more u-margin-top-medium">See what Fatih's teaching</a>
+            </div>
+        </div>
+    </div>
+
+    
+        <div class="headline u-margin-top-medium">
+            <div class="row u-text-center">
+                <div class="heading-primary-black">
+                    <div class="heading-primary-black--sub-normal-underline u-font-bold">
+                        Featured instructors
+                    </div>
+                </div>
+                <% if(obj.instructor != null){ %>
+                    <% obj.instructor.forEach(function(obj, i){ %>
+                    <div class="col-1-of-5">
+                        <a href=<%= "/instructor/" + obj._id %> >
+                            <div class="headline__item-featured u-padding-small u-margin-top-medium">
+                                <img src="../media/images/instructor-profile/vitalik_buterin.jpg" alt="" class="image-round image-round-medium">
+                                <div class="headline__item-title-featured u-margin-top-small"><%= obj.username %></div>
+                                <!-- <div class="headline__item-tag-featured"></div> -->
+                                <span class="headline__item-location">
+                                    <i class="fas fa-star" style="color: yellow"></i>
+                                    <i class="fas fa-star" style="color: yellow"></i>
+                                    <i class="fas fa-star" style="color: yellow"></i>
+                                    <i class="fas fa-star" style="color: yellow"></i>
+                                    <i class="fas fa-star-half" style="color: yellow"></i><br>
+                                    <span style="display: inline-block"> <%= obj.rating %> / 5</span>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <% }); %>
+                <% } %>
+            </div>
+        </div>
+
+        <div class="courses u-margin-top-medium">
+            <div class="row">
+                <div class="heading-primary-black">
+                    <div class="heading-primary-black--sub-normal-underline u-font-bold">
+                        Best-rated course
+                    </div>
+                </div>
+                <% if(obj.course != null) { %>
+                    <% obj.course.forEach(function(obj){ %>
+                    <div class="col-1-of-5">        
+                        <a href= <%= "/course/" + obj._id %>>
+                            <div class="courses__item u-margin-top-medium u-padding-small u-line-height-small">
+                                <div class="image">
+
+                                    <img src="../media/images/course/course2.jpg" alt="" class="image-default">
+                                </div>
+                                <span class="courses__item-title  heading-primary-black--sub-bold u-margin-top-small"><%= obj.name %></span>
+                                <span class="courses__item-author"><%= obj.instructor.name %></span>
+                                <span class="headline__item-location">
+                                        <i class="fas fa-star" style="color: yellow"></i>
+                                        <i class="fas fa-star" style="color: yellow"></i>
+                                        <i class="fas fa-star" style="color: yellow"></i>
+                                        <i class="fas fa-star" style="color: yellow"></i>
+                                        <i class="fas fa-star-half" style="color: yellow"></i>
+                                        <span style="display: inline-block"><%= obj.rating %> / 5 (<%= obj.voteCounter %> ratings)</span>
+                                    </span>
+                                <span class="courses__item-price">Rp. <%= obj.price %>/mo.</span>
+                            </div>
+                        </a>
+                    </div>
+                    <% }); %>
+                <% } %>
+            </div>
+        </div>
+    
+
+    <div class="most-searched u-margin-top-big">
+        <div class="row">
+            <div class="heading-primary-black">
+                <div class="heading-primary-black--sub-normal-underline u-font-bold">
+                    Most-searched keywords
+                </div>
+            </div>
+            <div class="recommended u-margin-top-medium">
+                <span class="recommended__item-black">Blockchain Programming</span>
+                <span class="recommended__item-black">Machine Learning</span>
+                <span class="recommended__item-black">Accounting</span>
+                <span class="recommended__item-black">Economics</span>
+                <span class="recommended__item-black">Stock Trading</span>
+                <span class="recommended__item-black">Japanese Language Course</span>
+                <span class="recommended__item-black">Mandarin</span>
+            </div>
+        </div>
+    </div>
+</main>
+
+<% include ./partials/footer %>

@@ -1,0 +1,71 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: $default-font-size;
+}
+
+a {
+    color: $color-black;
+    text-decoration: none;
+}
+
+.heading-primary-white {
+    text-transform: uppercase;
+    color: $color-white;
+    backface-visibility: hidden;
+
+    &--main {
+        font-size: 5rem;
+    }
+
+    &--sub {
+        font-size: 2.5rem;
+        text-transform: lowercase;
+        text-decoration: underline;
+    }
+}
+
+.heading-primary-black {
+    text-transform: uppercase;
+    color: $color-black;
+    backface-visibility: hidden;
+
+    &--main {
+        font-size: 5rem;
+    }
+
+    &--sub {
+        font-size: 2.5rem;
+        text-transform: lowercase;
+        text-decoration: underline;
+    }
+
+    &--sub-normal-underline {
+        font-size: 2rem;
+        text-decoration: underline;
+    }
+
+    &--sub-normal {
+        font-size: 2rem;
+    }
+
+    &--sub-bold {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    &--medium {
+        font-size: 2.5rem;
+
+        &-underline {
+            text-decoration: underline;
+        }
+    }
+
+    &--large {
+        font-size: 3.5rem;
+
+        &-underline {
+            text-decoration: underline;
+        }
+    }
+}

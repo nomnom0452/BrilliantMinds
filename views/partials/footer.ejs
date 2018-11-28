@@ -1,0 +1,33 @@
+</main>
+<section class="footer">
+        <div class="footer--copyright u-margin-top-medium u-text-center u-vertical-center-both">
+            Copyright Brilliant Minds 2018
+        </div>
+    </section>  
+</body>
+
+<script>
+    $(document).ready(() => {
+        let scrollStart = 0;
+        let start = $('main');
+        let offset = start.offset();
+
+        $(document).scroll(() => {
+            start = $(this).scrollTop();
+
+            if (start > offset.top) {
+                $('.header-home').addClass('header__default-scroll');
+                $('.header-home').removeClass('header__scrolled');
+            } else {
+                $('.header-home').addClass('header__scrolled');
+                $('.header-home').removeClass('header__default-scroll');
+            }
+        });
+    });
+
+    setTimeout(() => {
+        $('#enrolled').fadeOut();
+    }, 5000)
+</script>
+
+</html>

@@ -1,0 +1,9 @@
+.footer {
+    background-color: $color-black;
+    height: 3.5rem;
+    color: $color-white;
+
+    &--copyright {
+        position: relative;
+    }
+}

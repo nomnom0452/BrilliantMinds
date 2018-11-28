@@ -1,0 +1,109 @@
+<% include ./partials/header %>
+
+<div class="headline u-margin-top-medium">
+    <div class="row">
+        <div class="col-1-of-4">
+            <img src="../../media/images/instructor-profile/vitalik_buterin.jpg" alt="" class="image-round image-round-large u-align-right-image">
+        </div>
+        <div class="col-3-of-4">
+            <div class="u-padding-small u-line-height-small">
+                <% if(isEnrolled) { %>
+                    <div class="courses__item u-margin-top-medium u-padding-small u-line-height-small u-margin-bottom-medium" style="height: 20%;" id="enrolled">You have successfully enrolled!
+                    </div>
+                <% } %>
+                
+                <span class="headline__item-title"><%= name %></span>
+                <span class="headline__item-location"></span>
+                <span class="headline__item-description"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="headline headline__profile u-margin-top-medium">
+    <div class="row">
+        <div class="heading-primary-black">
+            <div class="heading-primary-black--medium heading-primary-black--medium u-font-bold u-font-bold u-text-underline">
+                Upcoming classes
+            </div>
+        </div>
+    </div>
+    <div class="row u-line-height-small">
+        <span class="headline__profile--name u-text-bold u-margin-top-small">Blockchain Programming</span>
+        <span class="headline__profile--location">Thursday, 28 May</span>
+        <span class="headline__profile--description">Introduction to Solidity</span>
+    </div>
+    <div class="row u-line-height-small">
+        <span class="headline__profile--name u-text-bold u-margin-top-small">Digital Photography - Learning by Doing</span>
+        <span class="headline__profile--location">Friday, 29 May</span>
+        <span class="headline__profile--description">Modern Photography Principles</span>
+    </div>
+    <div class="row">
+        <div class="heading-primary-black">
+            <div class="heading-primary-black--medium heading-primary-black--medium u-font-bold u-font-bold u-text-underline">
+               Resources
+            </div>
+        </div>
+    </div>
+    <div class="row u-line-height-small">
+        <span class="headline__profile--name u-text-bold u-margin-top-small">Blockchain Programming</span>
+        <span class="headline__profile--location">Week 1 - Introduction to Blockchain</span>
+        <span class="headline__profile--description" style="color: blue; text-decoration: underline">Download</span>
+    </div>
+    <div class="row u-line-height-small">
+        <span class="headline__profile--name u-text-bold u-margin-top-small">Digital Photography - Learning by Doing</span>
+        <span class="headline__profile--location">Week 1 - Modern Photography Principles</span>
+        <span class="headline__profile--description" style="color: blue; text-decoration: underline">Download</span>
+    </div>
+</div>
+
+<div class="courses u-margin-top-medium">
+    <div class="row">
+        <div class="heading-primary-black">
+            <div class="heading-primary-black--sub-normal-underline u-font-bold">
+                Enrolled course
+            </div>
+        </div>
+        <div class="col-1-of-5">
+            <a href="/courseDetail/1">
+                <div class="courses__item u-margin-top-medium u-padding-small u-line-height-small">
+                    <div class="image">
+                        <img src="../media/images/course/course2.jpg" alt="" class="image-default">
+                    </div>
+                    <span class="courses__item-title  heading-primary-black--sub-bold u-margin-top-small">Blockchain Programming</span>
+                    <span class="courses__item-author">Vitalik Buterin</span>
+                    <span class="headline__item-location">
+                        <i class="fas fa-star" style="color: yellow"></i>
+                        <i class="fas fa-star" style="color: yellow"></i>
+                        <i class="fas fa-star" style="color: yellow"></i>
+                        <i class="fas fa-star" style="color: yellow"></i>
+                        <i class="fas fa-star-half" style="color: yellow"></i>
+                        <span style="display: inline-block">4.8 / 5 (89 ratings)</span>
+                    </span>
+                    <span class="courses__item-price">Rp. 1.750.000/mo.</span>
+                </div>
+            </a>
+        </div>
+        <div class="col-1-of-5">
+            <a href="#">
+                <div class="courses__item u-margin-top-medium u-padding-small u-line-height-small">
+                    <div class="image">
+                        <img src="../media/images/course/course3.jpg" alt="" class="image-default">
+                    </div>
+                    <span class="courses__item-title  heading-primary-black--sub-bold u-margin-top-small">Digital Photography - Learning by Doing</span>
+                    <span class="courses__item-author">Fatih Amzah</span>
+                    <span class="headline__item-location">
+                        <i class="fas fa-star" style="color: yellow"></i>
+                        <i class="fas fa-star" style="color: yellow"></i>
+                        <i class="fas fa-star" style="color: yellow"></i>
+                        <i class="fas fa-star" style="color: yellow"></i>
+                        <i class="fas fa-star-half" style="color: yellow"></i>
+                        <span style="display: inline-block">4.8 / 5 (89 ratings)</span>
+                    </span>
+                    <span class="courses__item-price">Rp. 1.750.000/mo.</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<% include ./partials/footer %>

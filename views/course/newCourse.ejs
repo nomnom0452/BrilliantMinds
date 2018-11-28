@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+
+<main>
+    <div class="row">
+            <div class="heading-primary-black">
+                    <div class="hheading-primary-black--medium heading-primary-black--medium u-font-bold u-font-bold u-text-underline u-margin-top-medium">
+                        Sign up and start teaching
+                    </div>
+                </div>
+        <form action="/instructor/register" method="POST" class="form u-padding-small">
+            <label for="course" class="u-margin-top-large">Course name</label>
+            <input type="text" name="course" id="course" placeholder="Full Course name" class="form__field">
+
+            <label for="description" class="u-margin-top-large">Course Description</label>
+            <input type="text" name="description" id="description" placeholder="Description" class="form__field">
+
+            <label for="price"  class="u-margin-top-large">Price</label>
+            <input type="number" name="price" id="price" placeholder="18" min="0" max="3000000" class="form__field">
+
+            <label for="month"  class="u-margin-top-large">Month</label>
+            <input type="number" name="month" id="month" placeholder="1" min="1" max="12" class="form__field">
+
+            <label for="maxStudent"  class="u-margin-top-large">Max Student</label>
+            <input type="number" name="maxStudent" id="maxStudent" placeholder="1" min="1" class="form__field">
+            
+            <input type="submit" value="Add Course" class="button--more u-margin-top-medium">
+        </form>    
+    </div>
+    
+</main>
+
+<% include ../partials/footer %>

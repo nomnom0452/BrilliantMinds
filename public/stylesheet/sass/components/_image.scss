@@ -1,0 +1,24 @@
+.image {
+    &-default {
+        width: 100%;
+        height: 15rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    &-big {
+        width: 40rem;
+    }
+
+    &-round {
+        border-radius: 50%;
+        &-medium {
+            height: 15rem;
+        }
+
+        &-large {
+            height: 20rem;
+        }
+
+    }
+}

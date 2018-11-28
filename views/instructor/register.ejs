@@ -1,0 +1,37 @@
+<% include ../partials/header %>
+
+<main>
+    <%- messages('message', locals) %>
+    <% if(typeof errors == 'object' && errors){%>
+        <% errors.forEach(function (error){ %>
+            <div><%= error.msg %></div>
+        <% }); %>
+    <% }%>
+    <div class="row">
+        <div class="heading-primary-black">
+            <div class="hheading-primary-black--medium heading-primary-black--medium u-font-bold u-font-bold u-text-underline u-margin-top-medium">
+                Sign up and start teaching
+            </div>
+        </div>
+        <form action="/instructor/register" method="POST" class="form u-padding-small">
+            <!-- <label for="name" class="u-margin-top-large">Name</label>
+            <input type="text" name="name" id="name" placeholder="Full name" class="form__field"> -->
+
+            <label for="email" class="u-margin-top-large">Email</label>
+            <input type="text" name="email" id="email" placeholder="E-mail" class="form__field">
+
+            <label for="username" class="u-margin-top-large">Username</label>
+            <input type="text" name="username" id="username" placeholder="Username" class="form__field">
+
+            <label for="password" class="u-margin-top-large">Password</label>
+            <input type="password" name="password" id="password" placeholder="Password" class="form__field">
+            
+            <label for="passwordConf" class="u-margin-top-large">Confirm Password</label>
+            <input type="password" name="passwordConf" id="passwordConf" placeholder="Retype Password" class="form__field">
+            
+            <input type="submit" value="Sign Up" class="button--more u-margin-top-medium">
+        </form>    
+    </div>
+</main>
+
+<% include ../partials/footer %>

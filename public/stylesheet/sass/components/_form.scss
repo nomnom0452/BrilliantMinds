@@ -1,0 +1,12 @@
+.form {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+
+    &__field {
+        display: block;
+        width: 20%;
+        height: 3.5rem;
+        outline: none;
+    }
+}

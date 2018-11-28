@@ -1,0 +1,14 @@
+.searchbox-default {
+    width: 60%;
+    outline: none;
+    height: 15%;
+    padding: 1.3rem;
+    font-size: 1.9rem;
+    border-radius: .5rem;
+    background-color:transparent;
+    color: $color-white;
+    
+    &::placeholder {
+        color: $color-white;
+    }
+}

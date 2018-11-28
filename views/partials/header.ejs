@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BrilliantMinds </title>
+    <link rel="stylesheet" href="/stylesheet/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" 
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main class="main">
+    <header class="header header__default">
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="header__logo-box u-vertical-center">
+                    <a href="/">
+                        <img src="/media/images/logo/logo-white.png" alt="" class="header__logo">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-1-of-2">
+                <ul class="header__navigation u-text-right u-vertical-center">
+                    <% if(typeof user == 'object' && user){ %>
+                        <li class="header__navigation-item">
+                            <a href="/logout" class="default-link">Logout</a>
+                        </li>
+                    <% } else{ %>
+                        <li class="header__navigation-item">
+                            <a href="/loginHeader" class="default-link">Login</a>
+                        </li>
+                
+                        <li class="header__navigation-item">
+                            <a href="/registerHeader" class="default-link">Sign up</a>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </header>

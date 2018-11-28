@@ -1,0 +1,19 @@
+.courses {
+    &__item {
+        height: 35rem;
+        border: 2px solid $color-white;
+        box-shadow: .15rem .2rem .2rem $color-light-grey;
+        transition: all .2s;
+
+        span {
+            display: inline-block;
+        }
+
+        &:hover {
+            box-shadow: .3rem .4rem .2rem $color-light-grey;
+            transform: translateY(-.3rem);
+            border: 0.3rem solid $color-yellow;
+            cursor: pointer;
+        }
+    }
+}

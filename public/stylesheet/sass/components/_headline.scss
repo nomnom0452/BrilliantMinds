@@ -1,0 +1,85 @@
+.headline {
+  &__item {
+    &-best {
+      border: 3px solid $color-white;
+      box-shadow: .15rem .2rem .2rem $color-light-grey;
+      transition: all .2s;
+
+      &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: .3rem .4rem .2rem $color-light-grey;
+        border: 0.3rem solid $color-yellow;
+        cursor: pointer;
+      }
+    }
+
+    &-title {
+      font-size: 3rem;
+      font-weight: 700;
+
+      &-featured {
+        font-size: 2.3rem;
+        font-weight: 700;
+      }
+    }
+
+    &-featured {
+      height: 32rem;
+      border: 2px solid $color-white;
+      box-shadow: .15rem .2rem .2rem $color-light-grey;
+      transition: all 0.2s;
+  
+      span {
+        display: inline-block;
+      }
+  
+      &:hover {
+        transform: translateY(-0.3rem);
+        box-shadow: .3rem .4rem .2rem $color-light-grey;
+        border: 0.3rem solid $color-yellow;
+        cursor: pointer;
+      }
+    }
+    
+
+    &-tag {
+      font-style: italic;
+      font-weight: 700;
+      color: $color-grey;
+
+      &-featured {
+        font-size: 1.7rem;
+        font-weight: 700;
+        color: $color-grey;
+      }
+    }
+  }
+
+  &__profile {
+    &--name {
+      font-size: 2.1rem;
+    }
+
+    &--location {
+
+    }
+
+    &--degree {
+
+    }
+
+    &--year {
+
+    }
+
+    &--description {
+
+    }
+  }
+
+  span {
+    display: block;
+  }
+}
+
+

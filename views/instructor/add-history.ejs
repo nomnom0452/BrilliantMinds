@@ -1,0 +1,64 @@
+<% include ../partials/header %>
+
+<main>
+    <%- messages('message', locals) %>
+    <% if(typeof errors == 'object' && errors){%>
+        <% errors.forEach(function (error){ %>
+            <div><%= error.msg %></div>
+        <% }); %>
+    <% }%>
+    <div class="row">
+        <h1>TEMPORARY FOR ADD HISTORY</h1>
+        <div class="heading-primary-black">
+            <div class="hheading-primary-black--medium heading-primary-black--medium u-font-bold u-font-bold u-text-underline u-margin-top-medium">
+                Add History
+            </div>
+        </div>
+        <form action="/instructor/history/add" method="POST" class="form u-padding-small">
+            <div class="hheading-primary-black--medium heading-primary-black--medium u-font-bold u-font-bold u-text-underline u-margin-top-medium">
+                Add History
+            </div>
+
+            <label for="education">Education Name</label>
+            <input type="text" name="eduName" id="eduName" placeholder="name" class="form__field">
+
+            <label for="location" class="u-margin-top-large">Location</label>
+            <input type="text" name="eduLocation" id="location" placeholder="eduLocation" class="form__field">
+
+            <label for="studySubject" class="u-margin-top-large">studySubject</label>
+            <input type="text" name="studySubject" id="studySubject" placeholder="studySubject" class="form__field">
+
+            <label for="yearStart" class="u-margin-top-large">yearStart</label>
+            <input type="text" name="yearStart" id="yearStart" placeholder="yearStart" class="form__field">
+
+            <label for="yearEnd" class="u-margin-top-large">yearEnd</label>
+            <input type="text" name="yearEnd" id="yearEnd" placeholder="yearEnd" class="form__field">
+
+            <label for="gpa" class="u-margin-top-large">gpa</label>
+            <input type="text" name="gpa" id="gpa" placeholder="gpa" class="form__field">
+
+
+
+            <label for="company">company Name</label>
+            <input type="text" name="company" id="company" placeholder="company" class="form__field">
+
+            <label for="location" class="u-margin-top-large">role</label>
+            <input type="text" name="role" id="role" placeholder="role" class="form__field">
+
+            <label for="studySubject" class="u-margin-top-large">yearStart</label>
+            <input type="text" name="yearStart" id="yearStart" placeholder="yearStart" class="form__field">
+
+            <label for="yearEnd" class="u-margin-top-large">yearEnd</label>
+            <input type="text" name="yearEnd" id="yearEnd" placeholder="yearEnd" class="form__field">
+
+            <label for="gpa" class="u-margin-top-large">desc</label>
+            <input type="text" name="desc" id="desc" placeholder="desc" class="form__field">
+
+
+            <input type="submit" value="Login" class="button--more u-margin-top-medium">
+        </form>
+    </div>
+
+</main>
+
+<% include ../partials/footer %>

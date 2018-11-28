@@ -1,0 +1,32 @@
+<% include ./partials/header %>
+
+<main class="u-margin-top-big u-margin-bottom-big">
+    <%- messages('message', locals) %>
+    <% if(typeof errors == 'object' && errors){%>
+        <% errors.forEach(function (error){ %>
+            <div><%= error.msg %></div>
+        <% }); %>
+    <% }%>
+    <section class="loginAs">
+        <div class="row u-text-center">
+            <div class="col-1-of-2">
+                <div class="box">
+                        <img src="../media/images/instructor-profile/student.jpg" alt="" class=" image-big">
+                    <span class="heading-primary-black--sub-bold u-text-underline">Login as Student</span>
+                    <span>Learn what you love</span>
+                    <a href="/student/login" class="button button--more u-margin-top-xs u-margin-bottom-medium">Login</a>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <div class="box">
+                    <img src="../media/images/instructor-profile/teacher.jpg" alt="" class=" image-big">
+                    <span class="courses__item-title  heading-primary-black--sub-bold u-text-underline">Login as Instructor</span>
+                    <span class="courses__item-author">Teach what you love</span>
+                    <a href="/instructor/login" class="button button--more u-margin-top-xs u-margin-bottom-medium">Login</a>
+                </div>
+            </div>  
+        </div>
+    </section>
+</main>
+
+<% include ./partials/footer %>
